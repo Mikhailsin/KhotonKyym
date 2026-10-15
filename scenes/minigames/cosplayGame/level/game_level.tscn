@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://qnpg6ajfqn6i" path="res://scenes/minigames/cosplayGame/art/acc_3.tres" id="9_270gy"]
 [ext_resource type="Texture2D" uid="uid://dknbtj1hgvxvy" path="res://scenes/minigames/cosplayGame/art/acc_2.tres" id="10_f00w5"]
 [ext_resource type="Texture2D" uid="uid://yqa65hmneyui" path="res://scenes/minigames/cosplayGame/art/body.tres" id="12_bsqxk"]
+[ext_resource type="AudioStream" uid="uid://cvb73yxjnaqg6" path="res://fb54571140a80b7.mp3" id="13_aax5k"]
 
 [node name="GameLevel" type="Node2D" unique_id=854982903]
 script = ExtResource("1_t4ipj")
@@ -53,6 +54,11 @@ one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1479559557]
 zoom = Vector2(0.6, 0.6)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=901740063]
+stream = ExtResource("13_aax5k")
+volume_db = 24.0
+autoplay = true
 
 [connection signal="timeout" from="MemorizeTimer" to="." method="_on_memorize_timer_timeout"]
 [connection signal="timeout" from="CucleTimer" to="." method="_on_cucle_timer_timeout"]

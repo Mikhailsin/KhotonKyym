@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://d0qiwlcy8363g" path="res://scenes/minigames/paintGame/objects/dot.tscn" id="14_xmuer"]
 [ext_resource type="Script" uid="uid://djttb7vgxu26u" path="res://scenes/minigames/paintGame/level/animated_sprite_2d.gd" id="15_1sflb"]
 [ext_resource type="PackedScene" uid="uid://blv3n1oxfhfjd" path="res://scenes/minigames/paintGame/objects/contur.tscn" id="15_2dqvl"]
+[ext_resource type="AudioStream" uid="uid://b8ywmaqd4d5u7" path="res://sadtoi-beach-volley-club.mp3" id="18_fop6s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1sflb"]
 animations = [{
@@ -149,3 +150,8 @@ offset_bottom = -170.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text_direction = 3
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1861092201]
+stream = ExtResource("18_fop6s")
+volume_db = 24.0
+autoplay = true

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ctaj41ov2qx7q" path="res://scenes/screens/mainPage/art/Slide 16_9 - 17.png" id="1_gkdfb"]
 [ext_resource type="Script" uid="uid://d1tagt64mep81" path="res://scenes/screens/mainPage/exit.gd" id="2_mppmg"]
 [ext_resource type="Script" uid="uid://dr7kqpbdslgn0" path="res://scenes/screens/mainPage/name.gd" id="2_xyux5"]
+[ext_resource type="AudioStream" uid="uid://cat0q1bhbuy60" path="res://60da2b0c2e41b44.mp3" id="5_v5dqc"]
 [ext_resource type="Script" uid="uid://cgyj4dc2ew327" path="res://scenes/screens/mainPage/tutor.gd" id="6_ndn5i"]
 
 [node name="MainPage" type="Node2D" unique_id=648197739]
@@ -39,6 +40,9 @@ flat = true
 script = ExtResource("6_ndn5i")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=81566155]
+stream = ExtResource("5_v5dqc")
+volume_db = 24.0
+autoplay = true
 
 [connection signal="pressed" from="name" to="name" method="_on_pressed"]
 [connection signal="pressed" from="tutor" to="tutor" method="_on_pressed"]

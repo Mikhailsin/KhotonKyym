@@ -161,10 +161,10 @@ frame_progress = 0.2044492
 [node name="Camera2D" type="Camera2D" parent="." unique_id=591105266]
 
 [node name="Play" type="Button" parent="." unique_id=33058745]
-offset_left = -109.0
-offset_top = 99.0
-offset_right = 32.0
-offset_bottom = 171.0
+offset_left = -220.0
+offset_top = -34.0
+offset_right = 150.0
+offset_bottom = 297.0
 flat = true
 script = ExtResource("2_f8j27")
 

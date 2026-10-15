@@ -1,6 +1,57 @@
 [gd_scene format=3 uid="uid://b1oj8ga8vk2hp"]
 
 [ext_resource type="Script" uid="uid://cum0dvbt42v6a" path="res://scenes/screens/resultPage/result_page.gd" id="1_bls8n"]
+[ext_resource type="Texture2D" uid="uid://bl4nyyxkjom6t" path="res://scenes/screens/resultPage/art/bg.png" id="2_x7inr"]
+[ext_resource type="Script" uid="uid://c0mcpyufhtasl" path="res://scenes/screens/resultPage/button.gd" id="3_mypf6"]
 
 [node name="ResultPage" type="Node2D" unique_id=477096359]
 script = ExtResource("1_bls8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1581260145]
+position = Vector2(-3.9339066e-06, -4.7683716e-06)
+scale = Vector2(0.6, 0.59999996)
+texture = ExtResource("2_x7inr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1593390696]
+
+[node name="Button" type="Button" parent="." unique_id=2004629031]
+offset_left = 294.0
+offset_top = 210.0
+offset_right = 541.0
+offset_bottom = 300.0
+flat = true
+script = ExtResource("3_mypf6")
+
+[node name="first" type="Label" parent="." unique_id=236301647]
+offset_left = 38.0
+offset_top = -48.0
+offset_right = 246.0
+offset_bottom = -3.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="second" type="Label" parent="." unique_id=2021866376]
+offset_left = 39.0
+offset_top = 8.0
+offset_right = 221.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="third" type="Label" parent="." unique_id=1146459726]
+offset_left = 42.0
+offset_top = 68.0
+offset_right = 202.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="all" type="Label" parent="." unique_id=1326574454]
+offset_left = 46.0
+offset_top = 119.0
+offset_right = 198.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
