@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://nv8jyir1eoj"]
+
+[node name="Wall" type="Node2D" unique_id=443784865]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1068701523]
+polygon = PackedVector2Array(42, -206, 40, 254, -43, 259, -45, -207)

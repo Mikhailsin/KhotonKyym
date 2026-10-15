@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://yqa65hmneyui"]
+
+[ext_resource type="Texture2D" uid="uid://y1l08eound03" path="res://scenes/minigames/cosplayGame/art/katya sprites.png" id="1_80apx"]
+
+[resource]
+atlas = ExtResource("1_80apx")
+region = Rect2(204, 1, 357, 761)

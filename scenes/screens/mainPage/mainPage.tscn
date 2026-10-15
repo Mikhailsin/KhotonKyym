@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ca7i4cd6qiind"]
+
+[ext_resource type="Texture2D" uid="uid://ctaj41ov2qx7q" path="res://scenes/screens/mainPage/art/Slide 16_9 - 17.png" id="1_gkdfb"]
+[ext_resource type="Script" uid="uid://d1tagt64mep81" path="res://scenes/screens/mainPage/exit.gd" id="2_mppmg"]
+[ext_resource type="Script" uid="uid://dr7kqpbdslgn0" path="res://scenes/screens/mainPage/name.gd" id="2_xyux5"]
+[ext_resource type="Script" uid="uid://cgyj4dc2ew327" path="res://scenes/screens/mainPage/tutor.gd" id="6_ndn5i"]
+
+[node name="MainPage" type="Node2D" unique_id=648197739]
+
+[node name="background" type="Sprite2D" parent="." unique_id=936183714]
+position = Vector2(1.2040138e-05, 7.390976e-06)
+scale = Vector2(0.6, 0.59999996)
+texture = ExtResource("1_gkdfb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1511507264]
+
+[node name="name" type="Button" parent="." unique_id=1907708276]
+offset_left = 327.0
+offset_top = 121.0
+offset_right = 529.0
+offset_bottom = 203.0
+flat = true
+script = ExtResource("2_xyux5")
+
+[node name="exit" type="Button" parent="." unique_id=275373527]
+offset_left = -528.0
+offset_top = -275.0
+offset_right = -392.0
+offset_bottom = -217.0
+flat = true
+script = ExtResource("2_mppmg")
+
+[node name="tutor" type="Button" parent="." unique_id=1155125096]
+offset_left = 319.0
+offset_top = 221.0
+offset_right = 527.0
+offset_bottom = 281.0
+flat = true
+script = ExtResource("6_ndn5i")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=81566155]
+
+[connection signal="pressed" from="name" to="name" method="_on_pressed"]
+[connection signal="pressed" from="tutor" to="tutor" method="_on_pressed"]

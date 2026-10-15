@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://daiq2dm232c5d"]
+
+[ext_resource type="Texture2D" uid="uid://42461cmmpuic" path="res://scenes/minigames/paintGame/art/bg_workshop.png" id="1_anf5i"]
+[ext_resource type="Script" uid="uid://diwerchu685g4" path="res://scenes/minigames/paintGame/level/game_level.gd" id="1_nxgj4"]
+[ext_resource type="Texture2D" uid="uid://cd020hk1q5sxh" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_1.png" id="2_f7ala"]
+[ext_resource type="Texture2D" uid="uid://d0lmyofevk5qi" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_2.png" id="3_xmuer"]
+[ext_resource type="Texture2D" uid="uid://gv8s56dgycpw" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_3.png" id="4_2dqvl"]
+[ext_resource type="Texture2D" uid="uid://dl2lfwtuwat6s" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_4.png" id="5_nxgj4"]
+[ext_resource type="Texture2D" uid="uid://cu24pqbfn4ihd" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_5.png" id="6_1sflb"]
+[ext_resource type="Texture2D" uid="uid://tclrpo8rghtd" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_6.png" id="7_fop6s"]
+[ext_resource type="Texture2D" uid="uid://d0tnyhutw6kdk" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_7.png" id="8_amvry"]
+[ext_resource type="Texture2D" uid="uid://bnogf7jxxyrev" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_8.png" id="9_1cd82"]
+[ext_resource type="Texture2D" uid="uid://c34ti0eeul5ab" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_9.png" id="10_4albt"]
+[ext_resource type="Texture2D" uid="uid://bmf73yteuuape" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_10.png" id="11_rcx3c"]
+[ext_resource type="Texture2D" uid="uid://csbdvggxg4siw" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_11.png" id="12_2kd3s"]
+[ext_resource type="Texture2D" uid="uid://flq2uso5c5wm" path="res://scenes/minigames/paintGame/art/canvas/bg_workshop_canvas_12.png" id="13_084gw"]
+[ext_resource type="PackedScene" uid="uid://d0qiwlcy8363g" path="res://scenes/minigames/paintGame/objects/dot.tscn" id="14_xmuer"]
+[ext_resource type="Script" uid="uid://djttb7vgxu26u" path="res://scenes/minigames/paintGame/level/animated_sprite_2d.gd" id="15_1sflb"]
+[ext_resource type="PackedScene" uid="uid://blv3n1oxfhfjd" path="res://scenes/minigames/paintGame/objects/contur.tscn" id="15_2dqvl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1sflb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_f7ala")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xmuer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2dqvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nxgj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1sflb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fop6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_amvry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1cd82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4albt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rcx3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2kd3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_084gw")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntegx"]
+size = Vector2(593, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77ufj"]
+size = Vector2(595, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wk4h2"]
+size = Vector2(20, 576)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmrrs"]
+size = Vector2(20, 579)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ntegx"]
+radius = 4.0
+
+[node name="GameLevel" type="Node2D" unique_id=1776459700]
+script = ExtResource("1_nxgj4")
+next_scene = "uid://b8f1ign6hpicr"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1443632721]
+
+[node name="background" type="Sprite2D" parent="." unique_id=1933593837]
+position = Vector2(0.99999994, -4)
+scale = Vector2(0.6, 0.6000001)
+texture = ExtResource("1_anf5i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=873784591]
+position = Vector2(2.9999855, 41.000008)
+scale = Vector2(0.59999996, 0.6000001)
+sprite_frames = SubResource("SpriteFrames_1sflb")
+script = ExtResource("15_1sflb")
+
+[node name="Walls" type="Node2D" parent="." unique_id=1510609510]
+
+[node name="Top" type="StaticBody2D" parent="Walls" unique_id=432215861]
+position = Vector2(0, -306)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Top" unique_id=1957986004]
+position = Vector2(9, 4)
+shape = SubResource("RectangleShape2D_ntegx")
+
+[node name="Bottom" type="StaticBody2D" parent="Walls" unique_id=1279415666]
+position = Vector2(0, 284)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Bottom" unique_id=1527669140]
+position = Vector2(8, 7)
+shape = SubResource("RectangleShape2D_77ufj")
+
+[node name="Left" type="StaticBody2D" parent="Walls" unique_id=208201529]
+position = Vector2(318, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Left" unique_id=641567376]
+position = Vector2(-3, -4)
+shape = SubResource("RectangleShape2D_wk4h2")
+
+[node name="Right" type="StaticBody2D" parent="Walls" unique_id=145030212]
+position = Vector2(-293, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Right" unique_id=1975030790]
+position = Vector2(-4, -5)
+shape = SubResource("RectangleShape2D_mmrrs")
+
+[node name="Contur" parent="." unique_id=1407690107 instance=ExtResource("15_2dqvl")]
+position = Vector2(14, 27)
+
+[node name="Line2D" type="Line2D" parent="Contur" unique_id=265729028]
+position = Vector2(-20, -24)
+default_color = Color(0.21103525, 0.24063203, 0.62817544, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Dot" parent="." unique_id=1088509939 instance=ExtResource("14_xmuer")]
+position = Vector2(-239, 41)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot" unique_id=312930782]
+position = Vector2(-6, -3)
+shape = SubResource("CircleShape2D_ntegx")
+
+[node name="TimerLabel" type="Label" parent="." unique_id=996277587]
+offset_left = -85.0
+offset_top = -243.0
+offset_right = 86.0
+offset_bottom = -170.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text_direction = 3

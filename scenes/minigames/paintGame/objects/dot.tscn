@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d0qiwlcy8363g"]
+
+[ext_resource type="Script" uid="uid://bs36um1piknr4" path="res://scenes/minigames/paintGame/objects/dot.gd" id="1_sih02"]
+[ext_resource type="Texture2D" uid="uid://1upys8g71td3" path="res://scenes/minigames/paintGame/art/workshop_pencil.png" id="1_u4dv1"]
+
+[node name="Dot" type="CharacterBody2D" unique_id=1088509939]
+position = Vector2(0, -1)
+script = ExtResource("1_sih02")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476823219]
+position = Vector2(-73, -73)
+rotation = 4.712389
+texture = ExtResource("1_u4dv1")

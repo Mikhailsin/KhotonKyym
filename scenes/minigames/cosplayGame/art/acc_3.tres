@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://qnpg6ajfqn6i"]
+
+[ext_resource type="Texture2D" uid="uid://mblt0fjjisjp" path="res://scenes/minigames/cosplayGame/art/dressing_idle_accesories.png" id="1_o112j"]
+
+[resource]
+atlas = ExtResource("1_o112j")
+region = Rect2(349, 0, 112, 173)

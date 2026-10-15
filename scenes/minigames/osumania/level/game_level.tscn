@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://b8f1ign6hpicr"]
+
+[ext_resource type="PackedScene" uid="uid://dfdglmltorqae" path="res://scenes/minigames/osumania/objects/key_listener.tscn" id="1_h3xak"]
+[ext_resource type="Script" uid="uid://d0fq6k01k8wrc" path="res://scenes/minigames/osumania/level/game_level.gd" id="1_iyk3y"]
+[ext_resource type="Texture2D" uid="uid://yddkba3m86s" path="res://scenes/minigames/osumania/art/gark.png" id="2_njbp2"]
+[ext_resource type="Texture2D" uid="uid://cp65qmoljjhhr" path="res://scenes/minigames/osumania/art/bg_stage.png" id="3_06cx1"]
+[ext_resource type="Texture2D" uid="uid://bgh8aolxmjkup" path="res://scenes/screens/mainPage/art/monochromLenya.png" id="3_j63ag"]
+[ext_resource type="PackedScene" uid="uid://coqj034dvvbeu" path="res://scenes/minigames/osumania/objects/level_editor.tscn" id="4_1wrej"]
+
+[sub_resource type="Environment" id="Environment_i5mjo"]
+background_mode = 3
+glow_enabled = true
+
+[node name="GameLevel" type="Node2D" unique_id=1074925611]
+script = ExtResource("1_iyk3y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709028685]
+position = Vector2(4.708767e-05, 1.21593475e-05)
+scale = Vector2(0.6, 0.6000001)
+texture = ExtResource("3_06cx1")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" unique_id=1025520442]
+position = Vector2(-3.3334122, -121.66669)
+scale = Vector2(0.32583332, 0.3245833)
+texture = ExtResource("3_j63ag")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=1648528816]
+position = Vector2(-7.847944e-05, -1.9907951e-05)
+scale = Vector2(20.700516, 16.86458)
+texture = ExtResource("2_njbp2")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1847561924]
+
+[node name="KeyListener" parent="." unique_id=1931460193 instance=ExtResource("1_h3xak")]
+position = Vector2(-120, 280)
+key_name = "button_Q"
+
+[node name="KeyListener2" parent="." unique_id=1724699494 instance=ExtResource("1_h3xak")]
+position = Vector2(-40, 280)
+frame = 1
+key_name = "button_W"
+
+[node name="KeyListener3" parent="." unique_id=1814966991 instance=ExtResource("1_h3xak")]
+position = Vector2(40, 280)
+frame = 2
+key_name = "button_E"
+
+[node name="KeyListener4" parent="." unique_id=1966465255 instance=ExtResource("1_h3xak")]
+position = Vector2(120, 280)
+frame = 3
+key_name = "button_R"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1656787795]
+environment = SubResource("Environment_i5mjo")
+
+[node name="LevelEditor" parent="." unique_id=1656744463 instance=ExtResource("4_1wrej")]

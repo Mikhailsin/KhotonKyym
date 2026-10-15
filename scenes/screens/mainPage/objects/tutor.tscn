@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dqsqmk5mooimh"]
+
+[ext_resource type="Texture2D" uid="uid://dfrimlrwsk2s5" path="res://scenes/screens/mainPage/art/mmmmmmmm.png" id="1_35nee"]
+[ext_resource type="Texture2D" uid="uid://bdt64kc7otj0l" path="res://scenes/screens/mainPage/art/A4 - 2.png" id="2_n71wd"]
+[ext_resource type="Texture2D" uid="uid://cpxki6ynbim1c" path="res://scenes/screens/mainPage/art/A4 - 4.png" id="3_xjr7m"]
+[ext_resource type="Texture2D" uid="uid://cbug6jxweju2u" path="res://scenes/screens/mainPage/art/A4 - 3.png" id="4_dwu0l"]
+[ext_resource type="Texture2D" uid="uid://b3tvo0qp3jm2c" path="res://scenes/screens/mainPage/art/exit.png" id="5_n71wd"]
+[ext_resource type="Script" uid="uid://cwd708phsu5tw" path="res://scenes/screens/mainPage/objects/button.gd" id="5_xjr7m"]
+
+[node name="Tutor" type="Node2D" unique_id=1625461614]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1056640231]
+position = Vector2(-2.861023e-06, 1.04904175e-05)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_35nee")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=608156214]
+modulate = Color(0, 0, 0, 0.5254902)
+texture = ExtResource("1_35nee")
+
+[node name="Manya" type="Sprite2D" parent="." unique_id=1800367784]
+position = Vector2(-383.00003, -60)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_n71wd")
+
+[node name="Lenya" type="Sprite2D" parent="." unique_id=33024052]
+texture_filter = 1
+position = Vector2(1, 55.000004)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_xjr7m")
+
+[node name="Katya" type="Sprite2D" parent="." unique_id=1117509626]
+position = Vector2(385.00003, -55)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_dwu0l")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1650571209]
+
+[node name="Button" type="Button" parent="." unique_id=2132715407]
+offset_left = 469.0
+offset_top = 234.0
+offset_right = 563.0
+offset_bottom = 320.0
+flat = true
+script = ExtResource("5_xjr7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button" unique_id=218905870]
+modulate = Color(0.7507996, 0.7507996, 0.7507996, 0.8156863)
+position = Vector2(46, 40)
+scale = Vector2(1, 0.93434346)
+texture = ExtResource("5_n71wd")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

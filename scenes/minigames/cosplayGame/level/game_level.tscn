@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://c7lwciue8revb"]
+
+[ext_resource type="Script" uid="uid://rlx6vfigyw6j" path="res://scenes/minigames/cosplayGame/level/game_level.gd" id="1_t4ipj"]
+[ext_resource type="Texture2D" uid="uid://dyjeyppinxsrm" path="res://scenes/minigames/cosplayGame/art/bg_dressing.png" id="2_b1j5v"]
+[ext_resource type="Texture2D" uid="uid://dt2vnsha3ymbq" path="res://scenes/minigames/cosplayGame/art/hat_1.tres" id="2_pg0ia"]
+[ext_resource type="Texture2D" uid="uid://cg2xxen764q0g" path="res://scenes/minigames/cosplayGame/art/hat_2.tres" id="3_aax5k"]
+[ext_resource type="Texture2D" uid="uid://dkg2acgox7kba" path="res://scenes/minigames/cosplayGame/art/hat_3.tres" id="4_mggvr"]
+[ext_resource type="Texture2D" uid="uid://clp6wubp1uwuw" path="res://scenes/minigames/cosplayGame/art/dress_2.tres" id="5_7gg0f"]
+[ext_resource type="Texture2D" uid="uid://cjipf6wes6hvf" path="res://scenes/minigames/cosplayGame/art/dress_3.tres" id="6_xgibk"]
+[ext_resource type="Texture2D" uid="uid://dapsj22fdsrvg" path="res://scenes/minigames/cosplayGame/art/dress_1.tres" id="7_0vuh2"]
+[ext_resource type="Texture2D" uid="uid://bvr8rdtk22l6i" path="res://scenes/minigames/cosplayGame/art/acc_1.tres" id="8_pc1up"]
+[ext_resource type="Texture2D" uid="uid://qnpg6ajfqn6i" path="res://scenes/minigames/cosplayGame/art/acc_3.tres" id="9_270gy"]
+[ext_resource type="Texture2D" uid="uid://dknbtj1hgvxvy" path="res://scenes/minigames/cosplayGame/art/acc_2.tres" id="10_f00w5"]
+[ext_resource type="Texture2D" uid="uid://yqa65hmneyui" path="res://scenes/minigames/cosplayGame/art/body.tres" id="12_bsqxk"]
+
+[node name="GameLevel" type="Node2D" unique_id=854982903]
+script = ExtResource("1_t4ipj")
+hat_textures = Array[Texture2D]([ExtResource("2_pg0ia"), ExtResource("3_aax5k"), ExtResource("4_mggvr")])
+jacket_textures = Array[Texture2D]([ExtResource("5_7gg0f"), ExtResource("6_xgibk"), ExtResource("7_0vuh2")])
+accessory_textures = Array[Texture2D]([ExtResource("8_pc1up"), ExtResource("9_270gy"), ExtResource("10_f00w5")])
+
+[node name="bg" type="Sprite2D" parent="." unique_id=373559966]
+texture_filter = 1
+position = Vector2(3.33786e-05, -0.4999857)
+scale = Vector2(1, 1.002)
+texture = ExtResource("2_b1j5v")
+
+[node name="Katya" type="Node2D" parent="." unique_id=1282294704]
+
+[node name="JacketSprite" type="Sprite2D" parent="Katya" unique_id=528107664]
+z_index = 1
+position = Vector2(-1, 136)
+
+[node name="BodySprite" type="Sprite2D" parent="Katya" unique_id=1294252745]
+position = Vector2(0, 16)
+texture = ExtResource("12_bsqxk")
+
+[node name="HatSprite" type="Sprite2D" parent="Katya" unique_id=251469112]
+z_index = 3
+position = Vector2(1, -295)
+
+[node name="AccessorySprite" type="Sprite2D" parent="Katya" unique_id=883708670]
+z_index = 2
+position = Vector2(-7, -1)
+
+[node name="MemorizeTimer" type="Timer" parent="." unique_id=197768890]
+wait_time = 3.0
+one_shot = true
+
+[node name="CucleTimer" type="Timer" parent="." unique_id=1116907020]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=880019275]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1479559557]
+zoom = Vector2(0.6, 0.6)
+
+[connection signal="timeout" from="MemorizeTimer" to="." method="_on_memorize_timer_timeout"]
+[connection signal="timeout" from="CucleTimer" to="." method="_on_cucle_timer_timeout"]
